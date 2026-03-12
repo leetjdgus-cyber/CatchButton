@@ -35,7 +35,7 @@
             // 
             RunButton.BackColor = SystemColors.ActiveCaption;
             RunButton.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            RunButton.Location = new Point(392, 124);
+            RunButton.Location = new Point(339, 172);
             RunButton.Name = "RunButton";
             RunButton.Size = new Size(143, 75);
             RunButton.TabIndex = 0;
