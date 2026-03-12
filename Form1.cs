@@ -8,10 +8,17 @@ namespace CatchButton
         private int _missCount = 0;
         private bool _isGameOver = false;
         private const int MaxMisses = 20;
+        // 다시시작을 위해 초기 버튼 위치와 크기 저장
+        private Point _initialRunButtonLocation;
+        private Size _initialRunButtonSize;
 
         public Form1()
         {
             InitializeComponent();
+            // 초기 버튼 상태 저장
+            _initialRunButtonLocation = RunButton.Location;
+            _initialRunButtonSize = RunButton.Size;
+
             // 초기 점수 및 미스 표시
             this.Text = $"Score: {_score} | Misses: {_missCount}/{MaxMisses}";
         }
@@ -97,10 +104,25 @@ namespace CatchButton
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
-            
+            // 다시시작: 게임 상태 초기화
+            _score = 0;
+            _missCount = 0;
+            _isGameOver = false;
 
-
+            // 모든 버튼 다시 활성화
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button b)
+                    b.Enabled = true;
             }
+
+            // RunButton 크기와 위치 복원
+            RunButton.Size = _initialRunButtonSize;
+            RunButton.Location = _initialRunButtonLocation;
+
+            // 타이틀 초기화
+            this.Text = $"Score: {_score} | Misses: {_missCount}/{MaxMisses}";
+
+        }
     }
 }
