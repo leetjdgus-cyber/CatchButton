@@ -27,5 +27,9 @@
 
 -4단계 코드의 실행 스크린샷
 
+<img width="790" height="466" alt="image" src="https://github.com/user-attachments/assets/258a6b4a-49eb-4358-9e6d-b8359fa1c128" />
+
+다시시작 버튼을 클릭하면 , 스코어와 버튼상태가 초기화된다.
+
 ## 구현 시 어려웠던 점
--점수를 구현하는것에 어려움을 느껴 Copilot의 도움을 받았다, 
+-점수를 구현하는것과, 다시시작 버튼에 어려움이 생겨 Copilot의 도움을 받았다. 
