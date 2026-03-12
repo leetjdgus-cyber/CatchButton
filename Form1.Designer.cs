@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             RunButton = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // RunButton
@@ -44,11 +45,22 @@
             RunButton.Click += RunButton_Click;
             RunButton.MouseEnter += button1_MouseEnter;
             // 
+            // button1
+            // 
+            button1.Location = new Point(102, 388);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 1;
+            button1.Text = "다시 시작";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(RunButton);
             Name = "Form1";
             Text = "ㅌ";
@@ -60,5 +72,6 @@
         #endregion
 
         private Button RunButton;
+        private Button button1;
     }
 }

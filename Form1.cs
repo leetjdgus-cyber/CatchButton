@@ -70,6 +70,19 @@ namespace CatchButton
             _score += 100;
             this.Text = $"Score: {_score}";
             MessageBox.Show("축하합니다~", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // 버튼 크기를 10% 감소시킴 (최소 크기 제한)
+            const int MinSize = 20; // 최소 너비/높이
+            int newWidth = Math.Max(MinSize, (int)(RunButton.Width * 0.9));
+            int newHeight = Math.Max(MinSize, (int)(RunButton.Height * 0.9));
+
+            RunButton.Size = new Size(newWidth, newHeight);
+
+            // 버튼이 폼 영역을 벗어나지 않도록 위치 보정
+            int maxLeft = Math.Max(0, this.ClientSize.Width - RunButton.Width);
+            int maxTop = Math.Max(0, this.ClientSize.Height - RunButton.Height);
+            if (RunButton.Left > maxLeft) RunButton.Left = maxLeft;
+            if (RunButton.Top > maxTop) RunButton.Top = maxTop;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -81,5 +94,13 @@ namespace CatchButton
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+            
+
+
+            }
     }
 }
