@@ -51,7 +51,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(RunButton);
             Name = "Form1";
-            Text = "Form1";
+            Text = "ㅌ";
             Load += Form1_Load;
             MouseEnter += Form1_MouseEnter;
             ResumeLayout(false);
