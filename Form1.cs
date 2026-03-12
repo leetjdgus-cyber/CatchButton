@@ -41,9 +41,10 @@ namespace CatchButton
 
         private void RunButton_Click(object sender, EventArgs e)
         {
-            // 버튼을 클릭하면 점수 추가
+            // 버튼을 클릭하면 점수 추가 및 축하 메시지 표시
             _score += 100;
             this.Text = $"Score: {_score}";
+            MessageBox.Show("축하합니다~", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Form1_Load(object sender, EventArgs e)
